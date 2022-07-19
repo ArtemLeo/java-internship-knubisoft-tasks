@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "type": "donut",
+      "name": "Cake",
+      "ppu": 0.55,
+      "batters": {
+        "batter": [
+          {
+            "id": "1001",
+            "type": "Regular"
+          },
+          {
+            "id": "1002",
+            "type": "Chocolate"
+          },
+          {
+            "id": "1003",
+            "type": "Blueberry"
+          },
+          {
+            "id": "1004",
+            "type": "Devil's Food"
+          }
+        ]
+      },
+      "topping": [
+        {
+          "id": "5001",
+          "type": "None"
+        },
+        {
+          "id": "5002",
+          "type": "Glazed"
+        },
+        {
+          "id": "5005",
+          "type": "Sugar"
+        },
+        {
+          "id": "5007",
+          "type": "Powdered Sugar"
+        },
+        {
+          "id": "5006",
+          "type": "Chocolate with Sprinkles"
+        },
+        {
+          "id": "5003",
+          "type": "Chocolate"
+        },
+        {
+          "id": "5004",
+          "type": "Maple"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "donut2",
+      "name": "Cake2",
+      "ppu": 0.66,
+      "batters": {
+        "batter": [
+          {
+            "id": "2001",
+            "type": "Regular"
+          },
+          {
+            "id": "2002",
+            "type": "Chocolate"
+          },
+          {
+            "id": "2003",
+            "type": "Blueberry"
+          },
+          {
+            "id": "2004",
+            "type": "Devil's Food"
+          }
+        ]
+      },
+      "topping": [
+        {
+          "id": "6001",
+          "type": "None"
+        },
+        {
+          "id": "6002",
+          "type": "Glazed"
+        },
+        {
+          "id": "6005",
+          "type": "Sugar"
+        },
+        {
+          "id": "6007",
+          "type": "Powdered Sugar"
+        },
+        {
+          "id": "6006",
+          "type": "Chocolate with Sprinkles"
+        },
+        {
+          "id": "6003",
+          "type": "Chocolate"
+        },
+        {
+          "id": "6004",
+          "type": "Maple"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "donut3",
+      "name": "Cake3",
+      "ppu": 0.77,
+      "batters": {
+        "batter": [
+          {
+            "id": "3001",
+            "type": "Regular"
+          },
+          {
+            "id": "3002",
+            "type": "Chocolate"
+          },
+          {
+            "id": "3003",
+            "type": "Blueberry"
+          },
+          {
+            "id": "3004",
+            "type": "Devil's Food"
+          }
+        ]
+      },
+      "topping": [
+        {
+          "id": "7001",
+          "type": "None"
+        },
+        {
+          "id": "7002",
+          "type": "Glazed"
+        },
+        {
+          "id": "7005",
+          "type": "Sugar"
+        },
+        {
+          "id": "7007",
+          "type": "Powdered Sugar"
+        },
+        {
+          "id": "7006",
+          "type": "Chocolate with Sprinkles"
+        },
+        {
+          "id": "7003",
+          "type": "Chocolate"
+        },
+        {
+          "id": "7004",
+          "type": "Maple"
+        }
+      ]
+    }
+  ]
+}
