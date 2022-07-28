@@ -4,7 +4,7 @@ public class BoolTasksImpl implements BoolTasks {
 
     @Override
     public Boolean isTrueAutobox(boolean value) {
-        return null;
+        return false;
     }
 
     @Override

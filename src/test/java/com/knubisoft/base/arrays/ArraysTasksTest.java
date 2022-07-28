@@ -53,22 +53,18 @@ class ArraysTasksTest {
         int[] fourth3MaxInts = arraysTasks.findMax3InArray(new int[]{456, 789, 22, 234, 21, 678});
         int[] fifth3MaxInts = arraysTasks.findMax3InArray(new int[]{10, 9, 8, 7, 6, 5});
         int[] sixth3MaxInts = arraysTasks.findMax3InArray(new int[]{123452222, 485757377, 133343221, 567654, 1112335, 1});
-     /*   int[] seventh3MaxInts = arraysTasks.findMax3InArray(new int[]{1, 2}); //invalid input
+        int[] seventh3MaxInts = arraysTasks.findMax3InArray(new int[]{1, 2}); //invalid input
         int[] eighth3MaxInts = arraysTasks.findMax3InArray(new int[]{Integer.MAX_VALUE}); //invalid input
         int[] ninth3MaxInts = arraysTasks.findMax3InArray(new int[0]); //invalid input
-
-      */
         assertArrayEquals(new int[]{6, 5, 4}, first3MaxInts);
         assertArrayEquals(new int[]{255, 22, 20}, second3MaxInts);
         assertArrayEquals(new int[]{219, 17, 0}, third3MaxInts);
         assertArrayEquals(new int[]{789, 678, 456}, fourth3MaxInts);
         assertArrayEquals(new int[]{10, 9, 8}, fifth3MaxInts);
         assertArrayEquals(new int[]{485757377, 133343221, 123452222}, sixth3MaxInts);
-      /*  assertArrayEquals(new int[]{1, 2}, seventh3MaxInts);
+        assertArrayEquals(new int[]{1, 2}, seventh3MaxInts);
         assertArrayEquals(new int[]{Integer.MAX_VALUE}, eighth3MaxInts);
         assertArrayEquals(new int[0], ninth3MaxInts);
-
-       */
     }
 
     @Test
@@ -148,37 +144,36 @@ class ArraysTasksTest {
         assertEquals("car", arraysTasks.longestCommonPrefix(new String[]{"car", "carrier", "cartoon"}));
         assertEquals("string", arraysTasks.longestCommonPrefix(new String[]{"string", "string", "string"}));
         assertEquals("", arraysTasks.longestCommonPrefix(new String[0]));
-        assertEquals("1word", arraysTasks.longestCommonPrefix(new String[]{"1word"}));
-        assertEquals("fl", arraysTasks.longestCommonPrefix(new String[]{"flower", "flown", "fly"}));
+        assertEquals("1word", arraysTasks.longestCommonPrefix(new String[] {"1word"}));
+        assertEquals("fl", arraysTasks.longestCommonPrefix(new String[] {"flower", "flown", "fly"}));
     }
 
     @Test
     void missingNumber() {
-        assertEquals(2, arraysTasks.missingNumber(new int[]{3, 0, 1}));
-        assertEquals(2, arraysTasks.missingNumber(new int[]{3, 0, 1}));
-        assertEquals(9, arraysTasks.missingNumber(new int[]{10, 8, 5, 6, 3, 7, 2, 0, 1, 4}));
-        assertEquals(2, arraysTasks.missingNumber(new int[]{0, 1}));
-        assertEquals(3, arraysTasks.missingNumber(new int[]{0, 1, 2, 4, 5, 6, 7, 8, 9, 10}));
-        assertEquals(1, arraysTasks.missingNumber(new int[]{0, 2, 3, 4}));
-        assertEquals(13, arraysTasks.missingNumber(new int[]{15, 2, 6, 14, 10, 9, 12, 11, 1, 0, 3, 5, 4, 8, 7}));
-        assertEquals(0, arraysTasks.missingNumber(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
-        assertEquals(4, arraysTasks.missingNumber(new int[]{5, 1, 2, 3, 0}));
-        assertEquals(15, arraysTasks.missingNumber(new int[]{20, 19, 18, 17, 10, 11, 2, 3, 7, 8, 9, 16, 14, 13, 12, 4, 5, 0, 1, 6}));
-        assertEquals(5, arraysTasks.missingNumber(new int[]{0, 1, 9, 8, 6, 7, 4, 2, 3}));
-        assertEquals(9, arraysTasks.missingNumber(new int[]{6, 7, 8, 1, 2, 3, 4, 5, 0, 10}));
+        assertEquals(2, arraysTasks.missingNumber(new int[] {3,0,1}));
+        assertEquals(9, arraysTasks.missingNumber(new int[] {10,8,5,6,3,7,2,0,1,4}));
+        assertEquals(2, arraysTasks.missingNumber(new int[] {0,1}));
+        assertEquals(3, arraysTasks.missingNumber(new int[] {0,1,2,4,5,6,7,8,9,10}));
+        assertEquals(1, arraysTasks.missingNumber(new int[] {0,2,3,4}));
+        assertEquals(13, arraysTasks.missingNumber(new int[] {15,2,6,14,10,9,12,11,1,0,3,5,4,8,7}));
+        assertEquals(0, arraysTasks.missingNumber(new int[] {1,2,3,4,5,6,7,8,9,10}));
+        assertEquals(4, arraysTasks.missingNumber(new int[] {5,1,2,3,0}));
+        assertEquals(15, arraysTasks.missingNumber(new int[] {20,19,18,17,10,11,2,3,7,8,9,16,14,13,12,4,5,0,1,6}));
+        assertEquals(5, arraysTasks.missingNumber(new int[] {0,1,9,8,6,7,4,2,3}));
+        assertEquals(9, arraysTasks.missingNumber(new int[] {6,7,8,1,2,3,4,5,0,10}));
     }
 
     @Test
     void containsDuplicate() {
-        assertTrue(arraysTasks.containsDuplicate(new int[]{1, 2, 3, 1, 5, 6, 7, 8}));
-        assertFalse(arraysTasks.containsDuplicate(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
-        assertTrue(arraysTasks.containsDuplicate(new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE}));
-        assertFalse(arraysTasks.containsDuplicate(new int[]{234, 21, 6789, 122223, Integer.MIN_VALUE}));
-        assertTrue(arraysTasks.containsDuplicate(new int[]{0, 0, -1, 1, 12}));
-        assertFalse(arraysTasks.containsDuplicate(new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE}));
-        assertTrue(arraysTasks.containsDuplicate(new int[]{250, 456, 123, 90, 87, 250, 133, -1, -453, 0}));
-        assertFalse(arraysTasks.containsDuplicate(new int[]{1000, 2000, 3000, 0, -1000, -2000, -3000}));
-        assertTrue(arraysTasks.containsDuplicate(new int[]{18, 23, 79, 90, 2456, 23, 18, 90}));
-        assertFalse(arraysTasks.containsDuplicate(new int[]{546, Integer.MAX_VALUE, 234, -11, 18, Integer.MIN_VALUE, 51, 2}));
+        assertTrue(arraysTasks.containsDuplicate(new int[] {1,2,3,1,5,6,7,8}));
+        assertFalse(arraysTasks.containsDuplicate(new int[] {1,2,3,4,5,6,7,8,9,10}));
+        assertTrue(arraysTasks.containsDuplicate(new int[] {Integer.MAX_VALUE,Integer.MAX_VALUE}));
+        assertFalse(arraysTasks.containsDuplicate(new int[] {234,21,6789,122223,Integer.MIN_VALUE}));
+        assertTrue(arraysTasks.containsDuplicate(new int[] {0,0,-1,1,12}));
+        assertFalse(arraysTasks.containsDuplicate(new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE}));
+        assertTrue(arraysTasks.containsDuplicate(new int[] {250,456,123,90,87,250,133,-1,-453,0}));
+        assertFalse(arraysTasks.containsDuplicate(new int[] {1000,2000,3000,0,-1000,-2000,-3000}));
+        assertTrue(arraysTasks.containsDuplicate(new int[] {18,23,79,90,2456,23,18,90}));
+        assertFalse(arraysTasks.containsDuplicate(new int[] {546,Integer.MAX_VALUE,234,-11,18,Integer.MIN_VALUE,51,2}));
     }
 }
