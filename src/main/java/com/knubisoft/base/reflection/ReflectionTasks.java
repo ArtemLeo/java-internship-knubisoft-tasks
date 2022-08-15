@@ -1,5 +1,6 @@
 package com.knubisoft.base.reflection;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
@@ -53,7 +54,7 @@ public interface ReflectionTasks {
      * @param cls - class which will be scanned.
      * @param name - name of the method.
      * */
-    Object evaluateMethodByName(Class<?> cls, String name);
+    Object evaluateMethodByName(Class<?> cls, String name) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException;
     /**
      * You have to evaluate the method of class by the name and put to there args.
      * You need to return a value which will be returned from a found method.
@@ -70,5 +71,5 @@ public interface ReflectionTasks {
      * @param name - name of the field.
      * @param newValue - new value for the field.
      * */
-    Object changePrivateFieldValue(Object instance, String name, Object newValue);
+    Object changePrivateFieldValue(Object instance, String name, Object newValue) throws NoSuchFieldException, IllegalAccessException;
 }

@@ -85,7 +85,7 @@ public class BoolTasksTest {
     public void isSameSizeArraySuccessful() {
         assertTrue(instance.isSameSizeArray(new Object[100], new Object[100]));
         assertTrue(instance.isSameSizeArray(new Object[30], new Object[30]));
-        assertTrue(instance.isSameSizeArray(new Object[0], new Object[0]));
+        assertTrue(instance.isSameSizeArray(new Object[0]));
     }
 
     @Test
@@ -94,23 +94,23 @@ public class BoolTasksTest {
         assertFalse(instance.isSameSizeArray(new Object[100], new Object[30]));
         assertFalse(instance.isSameSizeArray(new Object[30], new Object[100]));
         assertFalse(instance.isSameSizeArray(null, new Object[100]));
-        assertFalse(instance.isSameSizeArray(new Object[30], null));
-        assertFalse(instance.isSameSizeArray(null, null));
+        assertFalse(instance.isSameSizeArray(new Object[30], (Object) null));
+        assertFalse(instance.isSameSizeArray(null, (Object) null));
     }
 
     @Test
     public void isSameCharactersCountSuccessful() {
-        assertTrue(instance.isSameCharactersCount("johndoe", "JohnDoe", 8));
+        assertTrue(instance.isSameCharactersCount("John doe", "JohnDoe", 8));
         assertTrue(instance.isSameCharactersCount("DoeJohn", "JohnDoe", 8));
     }
 
     @Test
     public void isSameCharactersCountFail() {
-        assertFalse(instance.isSameCharactersCount("johndoe", "John Doe", 0));
+        assertFalse(instance.isSameCharactersCount("john doe", "John Doe", 0));
         assertFalse(instance.isSameCharactersCount("", "John Doe", 8));
-        assertFalse(instance.isSameCharactersCount("johndoe", "", 8));
+        assertFalse(instance.isSameCharactersCount("john doe", "", 8));
         assertFalse(instance.isSameCharactersCount(null, "", 8));
-        assertFalse(instance.isSameCharactersCount("johndoe", null, 8));
+        assertFalse(instance.isSameCharactersCount("john doe", null, 8));
         assertFalse(instance.isSameCharactersCount(null, null, 8));
     }
 }

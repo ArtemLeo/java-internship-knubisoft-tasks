@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArraysTasksTest {
 
-    private ArraysTasks arraysTasks = new ArraysTasksImpl();
+    private final ArraysTasks arraysTasks = new ArraysTasksImpl();
 
     @Test
     void reverse() {

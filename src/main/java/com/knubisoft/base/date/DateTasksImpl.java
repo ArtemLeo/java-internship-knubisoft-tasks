@@ -1,15 +1,11 @@
 package com.knubisoft.base.date;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Locale;
-
 import static java.time.LocalDate.*;
 import static java.time.format.DateTimeFormatter.*;
 
@@ -99,7 +95,6 @@ public class DateTasksImpl implements DateTasks {
     public int getNumberOfMonthsRemainingInTheYear(String date) {
         LocalDate originalDate = parse(date);
         int numberOfMonth = originalDate.getMonthValue();
-        int res = 12 - numberOfMonth;
-        return res;
+        return 12 - numberOfMonth;
     }
 }

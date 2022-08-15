@@ -6,12 +6,8 @@ import java.util.stream.Collectors;
 public class ListTasksImpl implements ListTasks {
     @Override
     public List<String> addElements(String... elements) {
-        List<String> list = new LinkedList<>();
         if (elements != null) {
-            for (String s : elements) {
-                list.add(s);
-            }
-            return list;
+            return new LinkedList<>(Arrays.asList(elements));
         }
         return null;
     }
@@ -34,11 +30,11 @@ public class ListTasksImpl implements ListTasks {
     @Override
     public ArrayList<String> addElementsByIndexes(ArrayList<String> elements, int[] indexes) {
         if (indexes == null) {
-            throw new IllegalArgumentException("value can't be null");
+            throw new IllegalArgumentException();
         }
         for (int i : indexes) {
             if (i < 0 || i > elements.size()){
-                throw new IllegalArgumentException("value can't be < 0 or > elements size");
+                throw new IllegalArgumentException();
             }
             elements.add(i, elements.get(i));
         }
@@ -77,7 +73,7 @@ public class ListTasksImpl implements ListTasks {
         numbers.addAll(second);
         for (String s :third) {
             if (s == null){
-                throw new NullPointerException("value can't be null");
+                throw new NullPointerException();
             }
             numbers.add(Long.parseLong(s));
         }
@@ -130,12 +126,7 @@ public class ListTasksImpl implements ListTasks {
 
     @Override
     public List<String> removeNulls(List<String> list) {
-        ListIterator<String> iterator = list.listIterator();
-        while (iterator.hasNext()){
-            if (iterator.next() == null){
-                iterator.remove();
-            }
-        }
+        list.removeIf(Objects::isNull);
         return list;
     }
 
@@ -153,11 +144,10 @@ public class ListTasksImpl implements ListTasks {
     @Override
     public List<Integer> cloneIds(List<Integer> originalIds) {
         if (originalIds == null){
-            throw new NoSuchElementException("NoSuchElementException");
+            throw new NoSuchElementException();
         }
         originalIds.removeIf(Objects::isNull);
-        List<Integer> list = new ArrayList<>(originalIds);
-        return list;
+        return new ArrayList<>(originalIds);
     }
 
     @Override
@@ -180,7 +170,7 @@ public class ListTasksImpl implements ListTasks {
     @Override
     public List<String> compareElements(LinkedList<String> originalCollection, LinkedList<String> additionalCollection) {
         if (originalCollection == null || additionalCollection == null)
-            throw new IllegalArgumentException("IllegalArgumentException");
+            throw new IllegalArgumentException();
         List<String> newCollection = new LinkedList<>();
         for (String str : originalCollection) {
             for (String str2 : additionalCollection) {

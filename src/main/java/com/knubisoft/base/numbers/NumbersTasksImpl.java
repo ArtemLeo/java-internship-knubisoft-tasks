@@ -12,6 +12,7 @@ public class NumbersTasksImpl implements NumbersTasks {
         firstNumber = firstNumber - secondNumber;
         System.out.println(firstNumber + " " + secondNumber);
     }
+
     @Override
     public boolean isUglyInt(int number) {
         if (number < 1) {
@@ -80,7 +81,6 @@ public class NumbersTasksImpl implements NumbersTasks {
 
     @Override
     public BigInteger factorial(int number) {
-        BigInteger bigInt = BigInteger.valueOf(1);
         if (number == 0)
             return BigInteger.valueOf(1);
         else
@@ -97,11 +97,7 @@ public class NumbersTasksImpl implements NumbersTasks {
             temp = temp * 10 + remainder;
             number /= 10;
         }
-        if (original == temp) {
-            return true;
-        } else {
-            return false;
-        }
+        return original == temp;
     }
 
     @Override

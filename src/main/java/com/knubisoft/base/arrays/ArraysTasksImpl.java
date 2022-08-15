@@ -5,31 +5,31 @@ import java.util.Arrays;
 public class ArraysTasksImpl implements ArraysTasks {
 
     @Override
-    public int[] reverse(int[] array) {                            // Created a new reverse-array
-        int[] newRevArray = new int[array.length];                 // Created an integer variable
-        int variable = 0;                                          // Used a "for" cycle with a condition:
-        for (int i = array.length - 1; i >= 0; i--) {              // - full length array (-1)
-            newRevArray[variable] = array[i];                      // - postfix decrement
+    public int[] reverse(int[] array) {
+        int[] reverseArray = new int[array.length];
+        int variable = 0;
+        for (int i = array.length - 1; i >= 0; i--) {
+            reverseArray[variable] = array[i];
             variable++;
         }
-        return newRevArray;
+        return reverseArray;
     }
 
     @Override
     public int[] mergeArrays(int[] array1, int[] array2) {
         int[] newLength = Arrays.copyOf(array1, array1.length + array2.length);
         int variable = array1.length;
-        for (int number : array2) {                 // Connected java.util.Arrays library
-            newLength[variable] = number;           // Used "copyO" method (int[] original, int newLength)
-            variable++;                             // Used a "foreach" cycle to search through the elements of arrays
+        for (int number : array2) {
+            newLength[variable] = number;
+            variable++;
         }
         return newLength;
     }
 
     @Override
-    public int[] findMax3InArray(int[] array) {        // Connected java.util.Arrays library
-        if (array.length < 3) {                        // Used "copyO" method (int[] original, int newLength 3)
-            return array;                              // Used "if" constructions and "for" cycles
+    public int[] findMax3InArray(int[] array) {
+        if (array.length < 3) {
+            return array;
         }
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
@@ -46,9 +46,9 @@ public class ArraysTasksImpl implements ArraysTasks {
     @Override
     public int findLongestIncreasingContinuesSubsequence(int[] array) {
         int variableA = -1;
-        int variableB = 1;                   // Created 2 variables to compare the values in the array in turn
-        if (array.length == 0) {             // Used "if" constructions and "for" cycle
-            return 0;                        // Used "conjunction" as a criterion for comparing values in the array
+        int variableB = 1;
+        if (array.length == 0) {
+            return 0;
         }
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] < array[i + 1] && variableA == -1) {
@@ -76,9 +76,9 @@ public class ArraysTasksImpl implements ArraysTasks {
     }
 
     @Override
-    public int sumOfAllUniqueElements(int[] array) {   // Created 2 variables (to find unique values and their sum)
-        int sumArrayElements = 0;                      // Used "if" constructions and "for" cycles (for unique values)
-        int[] element = new int[array.length];         // Used "foreach" (to find the sum of unique values)
+    public int sumOfAllUniqueElements(int[] array) {
+        int sumArrayElements = 0;
+        int[] element = new int[array.length];
         int variableValue = 0;
         boolean x = false;
         for (int number : array) {
@@ -106,8 +106,8 @@ public class ArraysTasksImpl implements ArraysTasks {
     }
 
     @Override
-    public int[] moveZeroes(int[] array) {                       // Used "if" construction and "for" cycles
-        for (int i = 0; i < array.length - 1; i++) {             // Compared each value of the array with 0
+    public int[] moveZeroes(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] == 0) {
                     int a = array[j + 1];
@@ -120,11 +120,11 @@ public class ArraysTasksImpl implements ArraysTasks {
     }
 
     @Override
-    public int findFinalValue(int[] nums, int original) {          // Created a logical variable (boolean)
-        boolean variableValue = true;                              // Used "while" and "foreach" cycles
-        while (variableValue) {                                    // Used "if" construction
+    public int findFinalValue(int[] numbs, int original) {
+        boolean variableValue = true;
+        while (variableValue) {
             variableValue = false;
-            for (int number : nums) {
+            for (int number : numbs) {
                 if (original == number) {
                     original = number * 2;
                     variableValue = true;
@@ -135,13 +135,13 @@ public class ArraysTasksImpl implements ArraysTasks {
     }
 
     @Override
-    public String longestCommonPrefix(String[] words) {           // Created a string variable (String)
-        String longestPrefix = "";                                // Used "if" constructions and "for" cycles
-        if (words.length == 0) {                                  // Used the java.lang.String library
+    public String longestCommonPrefix(String[] words) {
+        String longestPrefix = "";
+        if (words.length == 0) {
             return longestPrefix;
-        }                             // Method "substring()" - shows the index value (return part of the string)
-        if (words.length == 1) {      // Method "contains()" - whether String contains the specified symbol sequence
-            return words[0];          // Method "isEmpty()" – checks if the line size is zero
+        }
+        if (words.length == 1) {
+            return words[0];
         }
         for (int i = words[0].length(); i >= 0; i--) {
             for (int j = 1; j < words.length; j++) {
@@ -160,10 +160,10 @@ public class ArraysTasksImpl implements ArraysTasks {
     }
 
     @Override
-    public int missingNumber(int[] array) {                       // Used "if" constructions
-        int variableValue;                                        // Used "for" and "foreach" cycles
-        for (int i = 0; i < array.length - 1; i++) {              // Performed the ordering of the values
-            for (int j = 0; j < array.length - i - 1; j++) {      // Searched for missing values
+    public int missingNumber(int[] array) {
+        int variableValue;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j + 1];
                     array[j + 1] = array[j];
@@ -185,8 +185,8 @@ public class ArraysTasksImpl implements ArraysTasks {
     }
 
     @Override
-    public boolean containsDuplicate(int[] array) {       // Used "if" construction and "for" cycles
-        for (int i = 0; i < array.length; i++) {          // Comparison of values between each other for duplication
+    public boolean containsDuplicate(int[] array) {
+        for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
                 if (j == i) {
                     continue;

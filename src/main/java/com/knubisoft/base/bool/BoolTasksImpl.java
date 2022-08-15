@@ -4,38 +4,22 @@ public class BoolTasksImpl implements BoolTasks {
 
     @Override
     public Boolean isTrueAutobox(boolean value) {
-        Boolean b = value;
-        if (b){
-            return b;
-        }
-        return false;
+        return value;
     }
 
     @Override
     public Boolean isFalseAutobox(boolean value) {
-        Boolean booleanVariable = value;
-        if (!booleanVariable) {
-            return booleanVariable;
-        }
-        return true;
+        return value;
     }
 
     @Override
     public boolean isTrueUnbox(Boolean value) {
-        boolean booleanVariable = value;
-        if (booleanVariable) {
-            return booleanVariable;
-        }
-        return false;
+        return value;
     }
 
     @Override
     public Boolean isFalseUnbox(boolean value) {
-        Boolean booleanVariable = value;
-        if (!booleanVariable) {
-            return booleanVariable;
-        }
-        return true;
+        return value;
     }
 
     @Override
@@ -60,34 +44,31 @@ public class BoolTasksImpl implements BoolTasks {
     }
 
     @Override
-    public boolean andComplexFunction(int generatedFirstDigit, double generatedSecondDigit, int range) {
-        if (Math.round(generatedSecondDigit) == generatedFirstDigit
-                && generatedFirstDigit <= range
-                && generatedSecondDigit <= range) {
-            return true;
-        }
-        return false;
+    public boolean andComplexFunction(int firstNumber, double secondNumber, int diapason) {
+        return Math.round(secondNumber) == firstNumber
+                && firstNumber <= diapason
+                && secondNumber <= diapason;
     }
 
     @Override
-    public boolean orComplexFunction(int generatedFirstDigit, double generatedSecondDigit, int generatedThirdDigit, int range) {
-        if (range >= 5) {
-            if (range <= 7)
-                return (generatedFirstDigit == Math.round(generatedSecondDigit)) || (generatedFirstDigit == generatedThirdDigit);
+    public boolean orComplexFunction(int firstNumber, double secondNumber, int thirdNumber, int diapason) {
+        if (diapason >= 5) {
+            if (diapason <= 7)
+                return (firstNumber == Math.round(secondNumber)) || (firstNumber == thirdNumber);
         }
         return false;
     }
 
     @Override
     public boolean isSameSizeArray(Object[] firstArray, Object... secondArray) {
-        String firstValue = "";
-        String secondValue = "";
+        StringBuilder firstValue = new StringBuilder();
+        StringBuilder secondValue = new StringBuilder();
         if (firstArray != null && secondArray != null) {
             for (Object firstObject : firstArray) {
-                firstValue += firstObject;
+                firstValue.append(firstObject);
             }
             for (Object secondObject : secondArray) {
-                secondValue += secondObject;
+                secondValue.append(secondObject);
             }
             return (firstValue.length() == secondValue.length());
         }
@@ -99,14 +80,14 @@ public class BoolTasksImpl implements BoolTasks {
         if (username == null || username.length() == 0 || name == null || name.length() == 0 || maxLength == 0) {
             return false;
         }
-        int firstCount = 0;
-        int secondCount = 0;
-        for (char value : username.toCharArray()) {
-            firstCount++;
+        int firstValue = 0;
+        int secondValue = 0;
+        for (char ignored : username.toCharArray()) {
+            firstValue++;
         }
-        for (char value : name.toCharArray()) {
-            secondCount++;
+        for (char ignored : name.toCharArray()) {
+            secondValue++;
         }
-        return firstCount <= maxLength && secondCount <= maxLength;
+        return firstValue <= maxLength && secondValue <= maxLength;
     }
 }

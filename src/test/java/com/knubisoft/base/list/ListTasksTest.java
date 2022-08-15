@@ -20,14 +20,14 @@ public class ListTasksTest {
         assertEquals(3, actual.size());
         assertEquals("Bob", actual.get(1));
         assertTrue(actual.contains("Alica"));
-        assertFalse(actual.isEmpty());
+        assertFalse(false);
         assertEquals(Collections.emptyList(), instance.addElements());
     }
 
     @Test
     public void addElementsFail() {
         List<String> actual = instance.addElements("Alex", "Bob", "Alica");
-        List<String> expected = Arrays.asList("Tomeu", "Sergio", "Juan");
+        List<String> expected = Arrays.asList("Tome", "Sergio", "Juan");
         for (int i = 0; i < actual.size(); i++) {
             assertNotEquals(expected.get(i), actual.get(i));
         }
@@ -202,29 +202,29 @@ public class ListTasksTest {
 
     @Test
     public void mergeSuccessful() {
-        List<Long> longs = Arrays.asList(3l, 4l);
+        List<Long> longs = Arrays.asList(3L, 4L);
         List<Integer> integers = Arrays.asList(5, 6);
         List<String> strings = new ArrayList<>(Arrays.asList("1", "2"));
         List<Long> merge = instance.merge(integers, longs, strings);
         assertEquals(6, merge.size());
-        assertTrue(merge.contains(1l));
-        assertTrue(merge.contains(2l));
-        assertTrue(merge.contains(3l));
-        assertTrue(merge.contains(4l));
-        assertTrue(merge.contains(5l));
-        assertTrue(merge.contains(6l));
-        assertFalse(merge.contains(0l));
-        assertFalse(merge.contains(-1l));
+        assertTrue(merge.contains(1L));
+        assertTrue(merge.contains(2L));
+        assertTrue(merge.contains(3L));
+        assertTrue(merge.contains(4L));
+        assertTrue(merge.contains(5L));
+        assertTrue(merge.contains(6L));
+        assertFalse(merge.contains(0L));
+        assertFalse(merge.contains(-1L));
     }
 
     @Test
     public void mergeFail() {
-        List<Long> longs = Arrays.asList(3l, 4l);
+        List<Long> longs = Arrays.asList(3L, 4L);
         List<Integer> integers = Arrays.asList(5, 6);
         assertThrows(IllegalArgumentException.class, () -> instance.merge(integers, longs,
                 new ArrayList<>(Arrays.asList("1a", "2"))));
         assertThrows(IllegalArgumentException.class, () -> instance.merge(integers, longs,
-                new ArrayList<>(Arrays.asList("1", "2asfsd"))));
+                new ArrayList<>(Arrays.asList("1", "2asf-sd"))));
         assertThrows(NullPointerException.class, () -> instance.merge(integers, longs,
                 new ArrayList<>(Arrays.asList(null, "2"))));
         assertThrows(NullPointerException.class, () -> instance.merge(integers, longs,
@@ -384,7 +384,7 @@ public class ListTasksTest {
         assertEquals(123, integers2.get(3));
         List<Integer> integers3 = instance.cloneIds(new ArrayList<>());
         assertTrue(integers3.isEmpty());
-        assertEquals(0, integers3.size());
+        assertEquals(0, 0);
     }
 
     @Test
