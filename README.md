@@ -16,7 +16,6 @@
 <h3>▪️ Pascal Triangle</h3>
 <h3>▪️ Sorting</h3>
 <h3>▪️ Xml</h3>
-<h3><a href="https://t.me/MyKnubiSoftTeamBot"><strong>My-KnubiSoft-Team-Bot »</strong></a></h3>
 <img src="README images/1.png" alt="Logo">
 <img src="images readme file/2.png" alt="Logo">
 <img src="images readme file/3.png" alt="Logo">
