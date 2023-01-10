@@ -16,10 +16,13 @@
 <h3>▪️ Pascal Triangle</h3>
 <h3>▪️ Sorting</h3>
 <h3>▪️ Xml</h3>
-<img src="README images/1.png" alt="Logo">
-<img src="images readme file/2.png" alt="Logo">
-<img src="images readme file/3.png" alt="Logo">
-<img src="images readme file/4.png" alt="Logo">
-<img src="images readme file/5.png" alt="Logo">
-<img src="images readme file/6.png" alt="Logo">
-
+<img src="README images/01_Arrays.png" alt="Logo">
+<img src="README images/02_Bool.png" alt="Logo">
+<img src="README images/03_Date.png" alt="Logo">
+<img src="README images/04_List.png" alt="Logo">
+<img src="README images/05_Number.png" alt="Logo">
+<img src="README images/06_Pattern.png" alt="Logo">
+<img src="README images/07_Queue.png" alt="Logo">
+<img src="README images/08_Reflection.png" alt="Logo">
+<img src="README images/09_String.png" alt="Logo">
+<img src="README images/10_Tree.png" alt="Logo">
