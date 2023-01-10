@@ -1,7 +1,7 @@
 <h1 align>Java-Internship-Knubisoft-Tasks 🖐</h1>
-<h3>▪️ Arrays</h3>
-<h3>▪️ Boolean</h3>
-<h3>▪️ Date</h3>
+<h4>▪️ Arrays</h4>
+<h4>▪️ Boolean</h4>
+<h4>▪️ Date</h4>
 <h3>▪️ List</h3>
 <h3>▪️ Numbers</h3>
 <h3>▪️ Pattern</h3>
