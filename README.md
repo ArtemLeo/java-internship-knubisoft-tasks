@@ -1,4 +1,5 @@
 <h1 align>Java-Internship-Knubisoft-Tasks 🖐</h1>
+<h2>Topics of this internship 👇</h2>
 <h3>▪️ Arrays ▪️ Boolean ▪️ Date ▪️ Fibonacci ▪️ Json ▪️ Xml</h3>
 <h3>▪️ List ▪️ Numbers ▪️ Pattern ▪️ Pascal Triangle ▪️ Sorting</h3>
 <h3>▪️ Queue ▪️ Reflection ▪️ String ▪️ Trees ▪️ Validation ▪️ Collection</h3>
