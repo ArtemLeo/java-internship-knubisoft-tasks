@@ -1,15 +1,15 @@
 <h1 align>Java-Internship-Knubisoft-Tasks 🖐</h1>
-<h2>▪️ Arrays</h2>
-<h2>▪️ Boolean</h2>
-<h2>▪️ Date</h2>
-<h2>▪️ List</h2>
-<h2>▪️ Numbers</h2>
-<h2>▪️ Pattern</h2>
-<h2>▪️ Queue</h2>
-<h2>▪️ Reflection</h2>
-<h2>▪️ String</h2>
-<h2>▪️ Trees</h2>
-<h2>▪️ Validation</h2>
+<h3>▪️ Arrays</h3>
+<h3>▪️ Boolean</h3>
+<h3>▪️ Date</h3>
+<h3>▪️ List</h3>
+<h3>▪️ Numbers</h3>
+<h3>▪️ Pattern</h3>
+<h3>▪️ Queue</h3>
+<h3>▪️ Reflection</h3>
+<h3>▪️ String</h3>
+<h3>▪️ Trees</h3>
+<h3>▪️ Validation</h3>
 <h2>▪️ Collection</h2>
 <h2>▪️ Fibonacci</h2>
 <h2>▪️ Json</h2>
