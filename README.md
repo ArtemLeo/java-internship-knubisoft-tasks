@@ -10,14 +10,14 @@
 <h3>▪️ String</h3>
 <h3>▪️ Trees</h3>
 <h3>▪️ Validation</h3>
-<h2>▪️ Collection</h2>
-<h2>▪️ Fibonacci</h2>
-<h2>▪️ Json</h2>
-<h2>▪️ Pascal Triangle</h2>
-<h2>▪️ Sorting</h2>
-<h2>▪️ Xml</h2>
+<h3>▪️ Collection</h3>
+<h3>▪️ Fibonacci</h3>
+<h3>▪️ Json</h3>
+<h3>▪️ Pascal Triangle</h3>
+<h3>▪️ Sorting</h3>
+<h3>▪️ Xml</h3>
 <h3><a href="https://t.me/MyKnubiSoftTeamBot"><strong>My-KnubiSoft-Team-Bot »</strong></a></h3>
-<img src="images readme file/1.png" alt="Logo">
+<img src="README images/1.png" alt="Logo">
 <img src="images readme file/2.png" alt="Logo">
 <img src="images readme file/3.png" alt="Logo">
 <img src="images readme file/4.png" alt="Logo">
